@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+   <meta name="viewport" content="width=device-width, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="icon" type="imagem/png" href="img/globoesporte.ico" />
+    <title>globoesporte.com</title>
+  </head>
+  <body>
+    <header class="general-padding">
+      <ul class="globo-links">
+        <li><a href="https://www.globo.com/" class="bold globo"> globo.com</a></li>
+        <li><a href="https://g1.globo.com/" class="bold g1">g1</a></li>
+        <li><a href="https://globoesporte.globo.com/" class="bold ge">globoesporte</a></li>
+        <li><a href="https://gshow.globo.com/" class="bold gshow">gshow</a></li>
+        <li><a href="https://globoplay.globo.com/" class="bold globo">vídeos</a></li>
+      </ul>
+      <div class="links-wrap">
+        <a href="#" class="links-header">ASSINE JÁ</a>
+        <a href="#" class="links-header">E-MAIL</a>
+        <script type="text/javascript">
+          function login() {
+            location.href="/login"
+          }
+          function search(e) {
+            if (event.key === 'Enter') {
+              location.href="/buscar?titulo=" + e.value
+            }
+          }
+        </script>
+
+        <button type="button" onClick="login()">ENTRAR</button>
+      </div>
+    </header>
+
+    <div class="menu-wrap  general-padding">
+      <img  src="img/menu-button.png" class="menu-icon" alt="">
+      <p class="vertical-align menu-link">MENU</p>
+      <p class="vertical-align responsive">TIMES</p>
+      <a class="vertical-align">globoesporte.com</a>
+      <input onkeydown="search(this)" type="search" class="vertical-align responsive" placeholder="BUSCAR"></input>
+    </div>
+
+    <section class="premiere-play general-padding">
+      <div class="float-left">
+        <img src="img/logo-premiere-play.svg" />
+      </div>
+      <p class="float-left">É hora do jogo! Jogos ao vivo e exclusivos do Brasileirão.</p>
+      <a href="#">Assine e assista</a>
+    </section>
+
+    <section class="image-wrap">
+
+      <div class="biggest-image">
+        <img src="img/image1.jpg"/>
+      </div>
+
+      <div class="other-images">
+        <div class="first-image">
+          <img src="img/image2.jpg"/>
+        </div>
+        <div>
+          <img src="img/image3.jpeg"/>
+        </div>
+      </div>
+
+    </section>
+  </body>
+</html>

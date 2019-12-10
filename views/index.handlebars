@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="icon" type="imagem/png" href="img/globoesporte.ico" />
+  <title>globoesporte.com</title>
+</head>
+<body>
+
+  <header class="general-padding">
+    <ul class="globo-links">
+      <li><a href="https://www.globo.com/" class="bold globo"> globo.com</a></li>
+      <li><a href="https://g1.globo.com/" class="bold g1">g1</a></li>
+      <li><a href="https://globoesporte.globo.com/" class="bold ge">globoesporte</a></li>
+      <li><a href="https://gshow.globo.com/" class="bold gshow">gshow</a></li>
+      <li><a href="https://globoplay.globo.com/" class="bold globo">vídeos</a></li>
+    </ul>
+    <div class="links-wrap">
+      <a href="#" class="links-header">MINHA CONTA</a>
+      <button type="button" onClick="addNew()"> Nova Noticia</a></button>
+      <button type="button" onClick="logout()">SAIR</button>
+    </div>
+  </header>
+
+  <div class="menu-wrap  general-padding">
+    <img  src="img/menu-button.png" class="menu-icon" alt="">
+    <p class="vertical-align menu-link">MENU</p>
+    <p class="vertical-align responsive">TIMES</p>
+    <a class="vertical-align">globoesporte.com</a>
+    <input onkeyup="search(this)" type="search" id="search-field" class="vertical-align responsive" placeholder="BUSCAR"></input>
+  </div>
+
+  <section class="premiere-play general-padding">
+    <div class="float-left">
+      <img src="img/logo-premiere-play.svg" />
+    </div>
+    <p class="float-left">É hora do jogo! Jogos ao vivo e exclusivos do Brasileirão.</p>
+    <a href="#">Assine e assista</a>
+  </section>
+  <section class="image-wrap" id="image-container">
+    {{#each this}}
+    <div class="telatoda">
+      <div class="other-images">
+        <div>
+            <img src="upload/{{conteudo}}"/>
+        </div>
+      </div>
+      <div class="texto">
+        <p>{{titulo}}</p>
+      </div>
+    </div>
+    {{/each}}
+
+  </section>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/index.js"></script>
+<script src="js/refresh.js"></script>
+<script type="text/javascript">
+    function logout() {
+        location.href="/logout"
+    }
+    function addNew() {
+        location.href="/nova"
+    }
+</script>
+</html>
